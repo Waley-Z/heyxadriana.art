@@ -1,7 +1,9 @@
+const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 
 module.exports = {
   entry: './src/js/main.js',
+  plugins: [new miniCssExtractPlugin()],
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
@@ -18,7 +20,9 @@ module.exports = {
         use: [
           {
             // Adds CSS to the DOM by injecting a `<style>` tag
-            loader: 'style-loader'
+            // loader: 'style-loader'
+            // Extracts CSS for each JS file that includes CSS
+            loader: miniCssExtractPlugin.loader
           },
           {
             // Interprets `@import` and `url()` like `import/require()` and will resolve them
