@@ -49,9 +49,9 @@ $ npm run build
 
 This task will create a distribution version of the project inside your local `dist/` folder
 
-## Credits
+## Resources
 
-TODO
+* [Bootstrap & Webpack](https://getbootstrap.com/docs/5.2/getting-started/webpack/)
 
 ## Built With
 
