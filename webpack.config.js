@@ -1,11 +1,17 @@
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
 const purgecss = require('@fullhuman/postcss-purgecss')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const path = require('path')
 
 module.exports = {
   entry: './src/js/main.js',
-  plugins: [new miniCssExtractPlugin()],
+  plugins: [
+    new miniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    })
+  ],
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')

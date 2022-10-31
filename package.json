@@ -1,6 +1,7 @@
 {
     "dependencies": {
-        "bootstrap": "^5.2.2"
+        "bootstrap": "^5.2.2",
+        "html-webpack-plugin": "^5.5.0"
     },
     "name": "heyxadriana.art",
     "version": "1.0.0",
