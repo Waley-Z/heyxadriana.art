@@ -1,4 +1,6 @@
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
+const purgecss = require('@fullhuman/postcss-purgecss')
+
 const path = require('path')
 
 module.exports = {
@@ -33,8 +35,13 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: () => [
-                  require('autoprefixer')
+                plugins: [
+                  [
+                    "autoprefixer"
+                  ],
+                  purgecss({
+                    content: ['./**/*.html']
+                  })
                 ]
               }
             }
