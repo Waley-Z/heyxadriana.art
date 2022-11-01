@@ -1,5 +1,4 @@
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
-const purgecss = require('@fullhuman/postcss-purgecss')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const path = require('path')
@@ -14,12 +13,7 @@ module.exports = {
   ],
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
-  },
-  devServer: {
-    static: path.resolve(__dirname, 'dist'),
-    port: 8080,
-    hot: true
+    path: path.resolve(__dirname, '..', 'dist')
   },
   module: {
     rules: [
@@ -42,12 +36,7 @@ module.exports = {
             options: {
               postcssOptions: {
                 plugins: [
-                  [
-                    "autoprefixer"
-                  ],
-                  purgecss({
-                    content: ['./**/*.html']
-                  })
+                  ["autoprefixer"]
                 ]
               }
             }

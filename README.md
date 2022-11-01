@@ -54,6 +54,7 @@ This task will create a distribution version of the project inside your local `d
 * [Bootstrap & Webpack](https://getbootstrap.com/docs/5.2/getting-started/webpack/)
 * [PurgeCSS](https://purgecss.com/plugins/postcss.html)
 * [HTML Webpack Plugin](https://github.com/jantimon/html-webpack-plugin)
+* [Webpack Production](https://webpack.js.org/guides/production/)
 
 ## Built With
 
